@@ -176,7 +176,7 @@ The following section details the post-acquisition filtering procedure used for 
 
 #### Photoplethysmography (PPG)
 
-: The PPG filtering procedure follows recommandations given by [Elgendi et al. 2013](https://doi.org/10.1371/journal.pone.0076585). 
+The PPG filtering procedure follows recommandations given by [Elgendi et al. 2013](https://doi.org/10.1371/journal.pone.0076585). 
 The artefacts were removed using a bidirectional butterworth bandpass filter (low cutoff: 0.5 Hz; high cutoff: 8 Hz; order: 3). 
 The signal was than downsampled to 1000 Hz. Systolic peaks were then detected using the method described in 
 [Elgendi et al. (2013)](https://doi.org/10.1371/journal.pone.0076585), and implemented in NeuroKit2 (see 
@@ -190,7 +190,7 @@ is based on [Lipponen & Tarvainen (2019)](https://doi.org/10.1080/03091902.2019.
 
 #### Electrocardiography (ECG)
 
-: The ECG filtering procedure was implemented as per the [manufacturer application notes](https://www.biopac.com/wp-content/uploads/app242x.pdf). 
+The ECG filtering procedure was implemented as per the [manufacturer application notes](https://www.biopac.com/wp-content/uploads/app242x.pdf). 
 Namely, a bidirectional butterworth highpass filter (cutoff: 2 Hz; order: 2) was first apply to remove low frequency artefacts such as respiration 
 and baseline wander. A second-order IIR notch digital filter was performed to filter fundamental and specific harmonics (Q: 100; see 
 [manufacturer application notes](https://www.biopac.com/wp-content/uploads/app242x.pdf) and [Bottenhorn et al., 2021](https://doi.org/10.1101/2021.04.01.437293)).
@@ -201,7 +201,7 @@ using the same procedure as described above for the systolic peak detection.
 
 #### Electrodermal activity (EDA)
 
-: The EDA filtering procedure was implemented as per [NeuroKit2 default EDA cleaning method](https://neuropsychology.github.io/NeuroKit/functions/eda.html#preprocessing). 
+The EDA filtering procedure was implemented as per [NeuroKit2 default EDA cleaning method](https://neuropsychology.github.io/NeuroKit/functions/eda.html#preprocessing). 
 Since EDA signal is characterised by low-frequency components and MRI gradients introduce high-frequency artefacts, a bidirectional butterworth lowpass filter 
 (cutoff: 3 Hz; order: 4) was employed to clean the signal, as suggested by [Privratsky et al. (2020)](https://doi.org/10.1016/j.ijpsycho.2020.09.015). However, 
 unlike what is proposed in that article, we refrained from applying a highpass filter to retain the tonic component of the EDA signal. The signal was than downsample 
@@ -212,7 +212,7 @@ the signal (minimum relative amplitude of 0.1).
 
 #### Respiration (RSP)
 
-: The RSP filtering procedure was implemented as per [Khodadad et al., 2018](https://doi.org/10.1088/1361-6579/aad7e6), which includes a bidirectional butterworth bandpass filter (low cutoff: 0.05 Hz; high cutoff: 3 Hz; order: 2) adapted for RSP measurements based on chest movements.
+The RSP filtering procedure was implemented as per [Khodadad et al., 2018](https://doi.org/10.1088/1361-6579/aad7e6), which includes a bidirectional butterworth bandpass filter (low cutoff: 0.05 Hz; high cutoff: 3 Hz; order: 2) adapted for RSP measurements based on chest movements.
 The lower cutoff was set to preserve breathing rate higher than 3 breath per minute. 
 The signal was than downsample to 1000 Hz. The peaks and trouhgs were identified on the downsampled signal 
 as per [Khodadad et al. (2018)](https://doi.org/10.1088/1361-6579/aad7e6).
