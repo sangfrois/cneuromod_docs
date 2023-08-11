@@ -227,7 +227,7 @@ in that report. A visual inspection was conducted to ensure the overall quality 
 described below. Even if a quality assessment is provided for each run, it is the responsibility of the researchers to make sure the data met their quality requirements. 
 
 
-#### Cardiac signals
+#### Cardiac signals quality
 
 For the PPG and the ECG signals, the following metrics were reported:
 
@@ -242,7 +242,7 @@ good if the mean of NN intervals was within the range of 600 and 1200, and if th
 we provided the percentage of the run containing cardiac signals within the normal NN intervals range. Futher quality checks should be carried out to ensure that the 
 available cardiac signal is suitable for a given analysis.
 
-#### Electrodermal activity
+#### Electrodermal activity quality
 
 For the EDA signal, the following metrics were reported:
 
@@ -257,7 +257,7 @@ The metrics listed above are provided as a quantitative description of the acqui
 SCR. Futher quality checks should be carried out to ensure that the available EDA signal is suitable for a given analysis.
 
 
-#### Respiratory activity
+#### Respiratory activity quality
 
 For the respiratory signals, the following metrics were reported:
   - Signal amplitude: Mean; Median; Standard deviation; Minimum; Maximum; Coefficient of variation
